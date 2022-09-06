@@ -15,9 +15,9 @@ def bili_workspace(path_prefix="", tf_repo_name=""):
   # Note that we check the minimum bazel version in WORKSPACE.
   bili_http_archive(
       name = "pcre",
-      sha256 = "84c3c4d2eb9166aaed44e39b89e4b6a49eac6fed273bdb844c94fb6c8bdda1b5",
+      sha256 = "69acbc2fbdefb955d42a4c606dfde800c2885711d2979e356c0636efde9ec3b5",
       urls = [
-          "http://bazel-cabin.bilibili.co/clib/pcre-8.42.zip",
+          "https://nchc.dl.sourceforge.net/project/pcre/pcre/8.42/pcre-8.42.tar.gz",
       ],
       strip_prefix = "pcre-8.42",
       build_file = clean_dep("//vendor:pcre.BUILD"),

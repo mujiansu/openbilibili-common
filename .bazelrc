@@ -1,15 +1,16 @@
 startup --expand_configs_in_place
 startup --max_idle_secs=10800 --connect_timeout_secs=5
-startup --host_jvm_args=-XX:+UseParallelGC --host_jvm_args=-Xmx6g --host_jvm_args=-Xms1g
-startup --idle_server_tasks --noexperimental_oom_more_eagerly --experimental_oom_more_eagerly_threshold=100
+#startup --host_jvm_args=-XX:+UseParallelGC --host_jvm_args=-Xmx6g --host_jvm_args=-Xms1g
+#startup --idle_server_tasks --noexperimental_oom_more_eagerly --experimental_oom_more_eagerly_threshold=100
 # Show us information about failures.
 # build --watchfs
 build:ci -j 4 
+build --incompatible_require_linker_input_cc_api=false
 build --experimental_repository_cache_hardlinks
 build --experimental_guard_against_concurrent_changes
 build --experimental_strict_action_env
 build --announce_rc
-build --remote_http_cache=http://bazel-cache.bilibili.co/go-common  --remote_local_fallback 
+#build --remote_http_cache=http://bazel-cache.bilibili.co/go-common  --remote_local_fallback 
 build --remote_max_connections=0
 build:ci --genrule_strategy=standalone --spawn_strategy=standalone
 build:office --genrule_strategy=sandboxed --spawn_strategy=sandboxed

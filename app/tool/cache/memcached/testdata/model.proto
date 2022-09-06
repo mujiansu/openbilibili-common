@@ -1,5 +1,5 @@
 syntax = "proto3";
-package model;
+package testdata;
 import "github.com/gogo/protobuf/gogoproto/gogo.proto";
 
 option (gogoproto.goproto_enum_prefix_all) = false;
