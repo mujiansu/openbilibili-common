@@ -1,5 +1,14 @@
 ### Kratos
 
+
+##### 本地编译
+
+tips: 编译机器对内存有要求，我使用的是4G内存
+
+```make ci-bazel-build```
+
+![图片](build_success.png)
+
 ##### 项目规范
 1,每个目录 需要有独立的README.md  CHANGELOG.md CONTRIBUTORS.md，具体可以参考：
 http://git.bilibili.co/platform/go-common/tree/master/business/service/archive
